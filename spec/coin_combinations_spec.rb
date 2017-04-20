@@ -17,4 +17,9 @@ describe('Fixnum#coin_combinations') do
   it('will return the proper number of nickels') do
     expect(5.coin_combinations()).to(eq('1 nickel'))
   end
+
+  it('will return the proper number of dimes') do
+    expect(10.coin_combinations()).to(eq('1 dime'))
+  end
+
 end
