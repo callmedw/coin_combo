@@ -2,7 +2,13 @@
 <form action="/output">
   <div class="form-group">
      <label for="number">Enter an amount in cents to recieve your change:</label>
-     <input id="number" name="number" class="form-control" type="number" min="1">
+     <input id="number" name="number" type="number" min="1"><br>
+     <label for="quarters">Enter an amount of quarters you wish to use:</label>
+     <input id="quarters" name="quarters" type="number" min="0"><br>
+     <label for="dimes">Enter an amount of dimes you wish to use:</label>
+     <input id="dimes" name="dimes" type="number" min="0"><br>
+     <label for="nickels">Enter an amount of nickels you wish to use:</label>
+     <input id="nickels" name="nickels" type="number" min="0"><br>
   </div>
   <button type="submit" class="btn-success">Give me my change!</button>
 </form>

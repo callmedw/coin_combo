@@ -7,6 +7,9 @@ get('/') do
 end
 
 get('/output') do
-  @output = params.fetch('number').to_i.coin_combinations(4,4,4)
+  quarters = params.fetch('quarters').to_i
+  dimes = params.fetch('dimes').to_i
+  nickels = params.fetch('nickels').to_i
+  @output = params.fetch('number').to_i.coin_combinations(quarters, dimes, nickels)
   erb(:output)
 end

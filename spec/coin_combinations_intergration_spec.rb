@@ -7,6 +7,9 @@ describe('coin_combinations', {:type => :feature}) do
   it('an amount in cents') do
     visit('/')
     fill_in('number', :with => '3')
+    fill_in('quarters', :with => '3')
+    fill_in('dimes', :with => '3')
+    fill_in('nickels', :with => '3')
     click_button('Give me my change!')
     expect(page).to have_content('3 pennies')
   end
