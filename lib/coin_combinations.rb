@@ -8,9 +8,14 @@ class Fixnum
     coin_array = []
     result = coin_array.join(' ')
     pennies = self./(1).to_s
+    nickels = self./(5).to_s
 
     if self > 99
       coin_array.push("No change needed")
+    elsif self > 5
+      coin_array.push(nickels.+(" nickels"))
+    elsif self == 5
+      coin_array.push(nickels.+(" nickel"))
     elsif self > 1
       coin_array.push(pennies.+(" pennies"))
     elsif self == 1
