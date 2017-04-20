@@ -16,21 +16,16 @@ class Fixnum
         remainder = change % key
         number_as_string = number.to_s
 
-        if number > 0
+        if number > 1
           if key == 1
-            if number > 1
-              coin_array.push(number_as_string.+(" pennies"))
-            else
-              coin_array.push(number_as_string.+(value))
-            end
-          elsif number > 1
+            coin_array.push(number_as_string.+(" pennies"))
+          else
             coin_array.push(number_as_string.+(value.+("s")))
-            change = remainder
-          elsif number == 1
-            coin_array.push(number_as_string.+(value))
-            change = remainder
           end
+        elsif number == 1
+          coin_array.push(number_as_string.+(value))
         end
+        change = remainder
       end
     end
     coin_array.join(' ')
