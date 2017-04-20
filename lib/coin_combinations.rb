@@ -6,9 +6,9 @@ class Fixnum
     coins.store(5, " nickel")
     coins.store(1, " penny")
     coin_array = []
-    change = self
+    change = self % 100
 
-    if self > 99
+    if change == 0
       coin_array.push("No change needed")
     else
       coins.each_pair do |key, value|
