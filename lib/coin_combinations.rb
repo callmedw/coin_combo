@@ -10,9 +10,14 @@ class Fixnum
     pennies = self./(1).to_s
     nickels = self./(5).to_s
     dimes = self./(10).to_s
+    quarters = self./(25).to_s
 
     if self > 99
       coin_array.push("No change needed")
+    elsif self > 25
+      coin_array.push(quarters.+(" quarters"))
+    elsif self == 25
+      coin_array.push(quarters.+(" quarter"))
     elsif self > 10
       coin_array.push(dimes.+(" dimes"))
     elsif self == 10

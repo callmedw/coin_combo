@@ -22,4 +22,8 @@ describe('Fixnum#coin_combinations') do
     expect(10.coin_combinations()).to(eq('1 dime'))
   end
 
+  it('will return the proper number of quarters') do
+    expect(25.coin_combinations()).to(eq('1 quarter'))
+  end
+
 end
